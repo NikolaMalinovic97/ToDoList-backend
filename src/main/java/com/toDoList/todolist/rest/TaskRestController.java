@@ -40,7 +40,7 @@ public class TaskRestController {
 			throw new RuntimeException("Task id not found - " + taskId);
 		}
 		
-		return null;
+		return theTask;
 	}
 	
 	@PostMapping("/tasks")

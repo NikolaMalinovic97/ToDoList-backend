@@ -27,7 +27,7 @@ public class TaskDAOImpl implements TaskDAO {
 		Session currentSession = entityManager.unwrap(Session.class);
 		
 		Query<Task> theQuery =
-				currentSession.createQuery("from task", Task.class);
+				currentSession.createQuery("from Task", Task.class);
 		
 		List<Task> tasks = theQuery.getResultList();
 		
@@ -58,7 +58,7 @@ public class TaskDAOImpl implements TaskDAO {
 		Session currentSession = entityManager.unwrap(Session.class);
 		
 		Query theQuery = 
-				currentSession.createQuery("delete from task where id=:taskId");
+				currentSession.createQuery("delete from Task where id=:taskId");
 		theQuery.setParameter("taskId", theId);
 		
 		theQuery.executeUpdate();
